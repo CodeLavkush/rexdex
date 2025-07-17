@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rexdex:v1.0
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
